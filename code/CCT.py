@@ -45,12 +45,8 @@ def show_results(trace, data):
     print(az.summary(trace, var_names=["D", "Z"]))
 
 if __name__ == '__main__':
-    script_dir = os.path.dirname(os.path.realpath(__file__))
-    data_path = os.path.join(script_dir, "..", "data", "plant_knowledge.csv")
-    print("Loading data from:", data_path)
+    script_dir = os.path.dirname(os.path.realpath(__file__)) #Used AI to figure out how to get plant knowledge
+    data_path = os.path.join(script_dir, "..", "data", "plant_knowledge.csv") #Used AI
     data = load_data(data_path)
-    print("Data shape:", data.shape)
     trace = run_model(data)
     show_results(trace, data)
-
-##RENAME VARIABLES HERE
