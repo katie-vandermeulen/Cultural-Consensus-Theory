@@ -26,7 +26,7 @@ def show_results(trace, data):
 
     D_mean = trace.posterior["D"].mean(dim=["chain", "draw"]).values
     print("Posterior Mean Competence (D):")
-    for i, d in enumerate(D_mean, start=1):
+    for i, d in enumerate(D_mean, start=1): #Used AI
         print(f"  Informant {i}: {d:.3f}")
     az.plot_posterior(trace, var_names=["D"])
     
@@ -41,7 +41,7 @@ def show_results(trace, data):
     for i, m in enumerate(majority, start=1):
         print(f"  Item {i}: {int(m)}")
 
-    print("\nModel Diagnostics Summary:")
+    print("\nDiagnostics Summary:")
     print(az.summary(trace, var_names=["D", "Z"]))
 
 if __name__ == '__main__':
@@ -52,3 +52,5 @@ if __name__ == '__main__':
     print("Data shape:", data.shape)
     trace = run_model(data)
     show_results(trace, data)
+
+##RENAME VARIABLES HERE
