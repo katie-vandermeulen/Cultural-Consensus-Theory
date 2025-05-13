@@ -1,5 +1,5 @@
-Structure and Choices
+# Structure and Choices
 
-Results and Checks
+# Results and Checks
 
-Discussion
+# Discussion
