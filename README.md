@@ -1,1 +1,5 @@
-# Cultural-Consensus-Theory
+Structure and Choices
+
+Results and Checks
+
+Discussion
