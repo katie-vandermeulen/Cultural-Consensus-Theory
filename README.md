@@ -1,5 +1,4 @@
 ## Structure and Choices
-
 The model defines three functions: loading the data, running the model, and outputting the results. These functions are used in the main model block to run the CCT analysis.
 
 Within the **run_model** function, I defined the priors for D and Z as uniform and bernoulli respectively. For D, a uniform prior is most accurate for reflecting informants' knowledge. It makes it so that it is equally likely for the informant to have no prior knowledge, for the informant to have full prior knowledge, and for the informant to have any level of prior knowledge in between. For Z, a bernoulli prior is most accurate because the correctness of an answer is a binary value. The informant can respond correctly (1) or incorrectly (0).
@@ -11,5 +10,5 @@ For the consensus answers, a mean closer to 0 indicates that the culture agrees 
 
 When looking at the Diagnostics Summary, every **r_hat** value is 1.00, or close enough. This suggests that the model did in fact converge. Convergence means that the samples drawn in the **run_model** block are reliable for estimating competence and consensus.
 
-## Discussion
+## Majority Vote Comparison
 The simple majority vote is taken from the raw data. This just calulates the majority answer without factoring in competence level. This simple majority vote therefore differs from the consensus. For example, in questions 2, 6, 8, and 10 the consensus gave the correct answer, however the majority vote gave the incorrect answer. This shows how in the CCT model, competence influences the consensus.
